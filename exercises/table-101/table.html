@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table - 01</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <main>
+        <section>
+            <table>
+                <caption>People</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <!-- center text -->
+                    <td colspan="3">Total: 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+
+                <tr>
+                    <td id="pm">Paola Mirri</td>
+                    <td><a href="mailto:paola.mirri@unibo.it">paola.mirri@unibo.it</a></td>
+                    <td>051 209 1234</td>
+                </tr>
+
+                <tr>
+                    <td id="jd">John Doe</td>
+                    <td><a href="mailto:john.doe@unibo.it">john.doe@unibo.it<a /></td>
+                    <td rowspan="2" headers="jd sr">051 209 5678</td>
+                </tr>
+
+                <tr>
+                    <td id="sr">Sofia Rossi</td>
+                    <td><a href="mailto:sofia.rossi@unibo.it">sofia.rossi@unibo.it</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table border="1">
+                <caption>Class schedule</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th id="mon" colspan="2" scope="colgroup">Monday</th>
+                        <th id="Tue" colspan="2" scope="colgroup">Tuesday</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th id="a21m" headers="mon" scope="col">Class 2.1</th>
+                        <th id="l22m" headers="mon" scope="col">Lab 2.2</th>
+                        <th id="a21t" headers="tue" scope="col">Class 2.1</th>
+                        <th id="l22t" headers="tue" scope="col">Lab 2.2</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th id="first" scope="row">9-10</th>
+                        <td rowspan="2" headers="mon a21m first second">Web Technologies</td>
+                        <td headers="mon l22m first">Math</td>
+                        <td headers="tue a21t first">Progr</td>
+                        <td rowspan="3" headers="tue l22t first second third">Multimedia System</td>
+                    </tr>
+
+                    <tr>
+                        <th id="second" scope="row">10-11</th>
+                        <td rowspan="2" id="mon l22m second third">Multimedia System</td>
+                        <td headers="tue a21t second">Math</td>
+                    </tr>
+
+                    <tr>
+                        <th id="third" scope="row">11-12</th>
+                        <td headers="mon a21m third">Math 2</td>
+                        <td headers="tue a21t third">Physics</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
