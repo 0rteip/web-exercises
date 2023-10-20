@@ -1,0 +1,108 @@
+body,
+header,
+h1,
+h2,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* no default values */
+
+body {
+    background-color: #e4e4e4;
+}
+
+body>header,
+body>footer {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    /* 20px top and bottom, 0 left and right */
+}
+
+body>header>h1 {
+    font-family: 'Monokai nerd Font', Courier, monospace;
+}
+
+nav {
+    margin: 0 5%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 45%;
+    background-color: rgb(54, 54, 54);
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    /* 100% of the parent element */
+    padding: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:nth-child(odd) {
+    margin-right: 9%;
+}
+
+nav ul li a:hover {
+    color: rgb(259, 69, 85);
+}
+
+main {
+    margin: 20px 5% 0;
+}
+
+article {
+    background-color: white;
+    border: #cacaca 1px solid;
+    margin-bottom: 20px;
+}
+
+article>header>img {
+    max-height: 200px;
+    padding: 10px 0;
+}
+
+article>header {
+    text-align: center;
+}
+
+article>header>h2,
+article>header>p {
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0 5%;
+}
+
+article>section {
+    padding: 0 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article>footer {
+    text-align: right;
+    padding: 20px 5% 5%;
+}
+
+article>footer>a {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
