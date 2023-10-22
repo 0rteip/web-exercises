@@ -9,7 +9,6 @@
         Descrizione (textarea).
     Bottoni di Submit e Cancella della form. -->
 
-
 <!DOCTYPE html>
 <html lang="it">
 
@@ -23,47 +22,60 @@
         <h1>Contatti</h1>
     </header>
     <main>
+        <!-- La section e il corrispettivo titolo sono stati pensati per una maggiore facilità di espansione -->
         <section>
+            <!-- Un h2 permette una più chiara struttura della sezione che segue per strumenti di ausilio alla lettura -->
+            <!-- Le scelta di tenerlo hidden dovuta alla section che rappresenta la principale e unica informazione della pagina -->
+            <!-- Il titolo situato nel'header risulta sufficiente alla comprensione della pagina -->
+            <h2 hidden>Form Contatti</h2>
             <form action="/action_page.php" method="post">
                 <fieldset>
                     <legend>Informazioni Anagrafiche</legend>
-                    <label>Nome: <input type="text" name="nome" id="name" required></label> <br />
-                    <label>Cognome: <input type="text" name="surname" id="surname" required></label> <br />
-                    <label>Codice Fiscale: <input type="text" name="cv" id="cv" required></label><br />
-                    <label>Data di nascita: <input type="date" name="born-date" id="born" required></label> <br />
-                    <label>Lugo di nascita: <input type="text" name="city" id="city" required></label> <br />
-                    <label>Indirizzo: <input type="text" name="street" id="street" required></label>
+                    <label>Nome <input type="text" name="name" id="name" required></label> <br />
+                    <label>Cognome <input type="text" name="surname" id="surname" required></label> <br />
+                    <label>Codice Fiscale <input type="text" name="fc" id="cv" required></label><br />
+                    <label>Data di nascita <input type="date" name="born-date" id="born" required></label> <br />
+                    <label>Luogo di nascita <input type="text" name="city" id="city" required></label> <br />
+                    <label>Indirizzo <input type="text" name="street" id="street" required></label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Preferenze</legend>
 
-                    <p>Assicurazione:</p>
-                    <input type="radio" name="insurance" id="ins1" value="first">
-                    <label for="ins1">Primo Livello</label> <br />
-                    <input type="radio" name="insurance" id="ins2" value="second">
-                    <label for="ins2">Secondo Livello</label> <br />
-                    <input type="radio" name="insurance" id="ins3" value="third">
-                    <label for="ins3">Terzo Livello</label> <br />
+                    <p>Livello di assicurazione</p>
+                    <input type="radio" name="insurance_level" id="ins1" value="first">
+                    <label for="ins1">Primo</label> <br />
+                    <input type="radio" name="insurance_level" id="ins2" value="second">
+                    <label for="ins2">Secondo</label> <br />
+                    <input type="radio" name="insurance_level" id="ins3" value="third">
+                    <label for="ins3">Terzo</label> <br />
 
-                    <label for="mezzo">Mezzo Preferito:</label>
-                    <select name="mezzo" id="mezzo" required>
-                        <option value="" disabled hidden selected>Seleziona un mezzo</option>
-                        <option value="car">Automobile</option>
-                        <option value="moto">Moto</option>
-                        <option value="bike">Bicicletta</option>
-                        <option value="monopattino">Monopattino</option>
+                    <!-- Ho deciso di usare due <optgroup> per dividere i mezzi di trasporto a motore da quelli non a motore aumentando la scelta. -->
+                    <label for="vehicle">Mezzo di trasporto preferito</label>
+                    <select name="vehicle" id="vehicle" required>
+                        <option value="" disabled hidden selected>Seleziona un mezzo di trasporto</option>
+                        <optgroup label="A motore">
+                            <option value="car">Automobile</option>
+                            <option value="motorbike">Motocicletta</option>
+                            <option value="m_bicycle">Bicicletta</option>
+                            <option value="m_scooter">Monopattino</option>
+                        </optgroup>
+                        <optgroup label="Non a motore">
+                            <option value="bicycle">Bicicletta</option>
+                            <option value="scooter">Monopattino</option>
+                        </optgroup>
                     </select>
                     <br />
 
+                    <input type="checkbox" name="car_disponibility" id="car_disponibility" value="has_car">
+                    <label for="car_disponibility">Disponibilità di veicolo personale</label> <br />
 
-                    <label>Automunito:<input type="checkbox" name="have_car" id="h_car" value="have_car"></label> <br />
                     <label for="desc">Descrizione</label> <br>
-                    <textarea name="descrizio" id="desc" cols="50"
+                    <textarea name="desc" id="desc" cols="50"
                         rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus?</textarea>
                 </fieldset>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Invia">
                 <label for="reset" hidden>reset</label>
                 <input type="reset" value="Cancella" id="reset">
             </form>
