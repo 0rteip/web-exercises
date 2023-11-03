@@ -7,8 +7,6 @@ ul {
     padding: 0;
 }
 
-/* no default values */
-
 body {
     background-color: #e4e4e4;
 }
@@ -19,15 +17,16 @@ body>footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    /* 20px top and bottom, 0 left and right */
 }
 
-body>header>h1 {
+body>header>h1,
+body>footer>p {
     font-family: 'Monokai nerd Font', Courier, monospace;
 }
 
 nav {
     margin: 0 5%;
+    font-size: 0px;
 }
 
 nav ul {
@@ -36,7 +35,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    width: 45%;
+    width: 45.5%;
     background-color: rgb(54, 54, 54);
     text-align: center;
     margin: 10px 0 0;
@@ -50,6 +49,7 @@ nav ul li a {
     /* 100% of the parent element */
     padding: 10px 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
     text-decoration: none;
     color: white;
 }
@@ -75,6 +75,7 @@ article {
 
 article>header>img {
     max-height: 200px;
+    max-width: 100%;
     padding: 10px 0;
 }
 
@@ -90,7 +91,9 @@ article>header>p {
 }
 
 article>section {
-    padding: 0 5%;
+    /* padding: 0 5%;
+    */
+    margin: 0 5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -99,12 +102,189 @@ article>footer {
     padding: 20px 5% 5%;
 }
 
-article>footer>a {
+article>footer>a,
+form input[type="submit"] {
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     background-color: #e4e4e4;
     border-radius: 5px;
     padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
 
+aside {
+    box-sizing: border-box;
+    /* to include padding and border in the width */
+    background-color: white;
+    border: #cacaca 1px solid;
+    border-radius: 5px;
+    margin: 0 5% 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+aside section {
+    padding: 20px 5%;
+}
+
+aside>section>h2 {
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    padding: 0 0 10px;
+}
+
+aside li>img {
+    float: left;
+    width: 50px;
+    margin-right: 10px;
+}
+
+aside li>a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+aside li>a>abbr {
+    text-decoration: none;
+}
+
+aside li>a:visited {
+    color: rgb(167, 125, 206);
+}
+
+aside li>a:hover {
+    color: rgb(259, 69, 85);
+}
+
+aside>section:first-of-type>h2:hover {
+    color: rgb(259, 69, 85);
+}
+
+main>section {
+    background-color: white;
+    border: #cacaca 1px solid;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px 5%;
+}
+
+main>section>h2 {
+    padding: 0 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: #cacaca 1px solid;
+}
+
+caption {
+    display: none;
+}
+
+td,
+th {
+    padding: 10px;
+    border: #cacaca 1px solid;
+    text-align: center;
+}
+
+th {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form>ul>li {
+    list-style-type: none;
+    margin: 0 10% 20px;
+    font-size: 0px;
+}
+
+form label {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+}
+
+label+input {
+    font-size: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    padding: 4px 8px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00ab58;
+    color: white;
+}
+
+form li:last-of-type {
+    text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        margin: 0 10%;
+    }
+
+    /* nav>ul>li:nth-child(odd) {
+        margin-right: 9%;
+    } */
+
+    nav>ul>li {
+        margin-right: 9% !important;
+        width: 18.25%;
+    }
+
+    nav>ul>li:last-child {
+        margin-right: 0 !important;
+    }
+
+    body {
+        font-size: 0px;
+    }
+
+    main,
+    aside {
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    main {
+        width: 50%;
+        margin: 20px 5% 0 10%;
+        font-size: 16px;
+    }
+
+    aside {
+        width: 25%;
+        margin: 20px 10% 20px 0;
+        font-size: 16px;
+    }
+
+    body>header,
+    body>footer {
+        font-size: 16px;
+    }
 }
